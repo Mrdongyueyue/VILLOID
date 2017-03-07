@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CDB35041E6ED5DA004D3426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35031E6ED5DA004D3426 /* main.m */; };
+		3CDB35071E6ED5DA004D3426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35061E6ED5DA004D3426 /* AppDelegate.m */; };
+		3CDB350A1E6ED5DA004D3426 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35091E6ED5DA004D3426 /* ViewController.m */; };
+		3CDB350D1E6ED5DA004D3426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB350B1E6ED5DA004D3426 /* Main.storyboard */; };
+		3CDB350F1E6ED5DA004D3426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB350E1E6ED5DA004D3426 /* Assets.xcassets */; };
+		3CDB35121E6ED5DA004D3426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB35101E6ED5DA004D3426 /* LaunchScreen.storyboard */; };
+		3CDB351D1E6ED5DA004D3426 /* VILLOIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB351C1E6ED5DA004D3426 /* VILLOIDTests.m */; };
+		3CDB35281E6ED5DA004D3426 /* VILLOIDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35271E6ED5DA004D3426 /* VILLOIDUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CDB35191E6ED5DA004D3426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDB34F71E6ED5DA004D3426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CDB34FE1E6ED5DA004D3426;
+			remoteInfo = VILLOID;
+		};
+		3CDB35241E6ED5DA004D3426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDB34F71E6ED5DA004D3426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CDB34FE1E6ED5DA004D3426;
+			remoteInfo = VILLOID;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CDB34FF1E6ED5DA004D3426 /* VILLOID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VILLOID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDB35031E6ED5DA004D3426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CDB35051E6ED5DA004D3426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3CDB35061E6ED5DA004D3426 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3CDB35081E6ED5DA004D3426 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3CDB35091E6ED5DA004D3426 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3CDB350C1E6ED5DA004D3426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CDB350E1E6ED5DA004D3426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CDB35111E6ED5DA004D3426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CDB35131E6ED5DA004D3426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDB35181E6ED5DA004D3426 /* VILLOIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VILLOIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDB351C1E6ED5DA004D3426 /* VILLOIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VILLOIDTests.m; sourceTree = "<group>"; };
+		3CDB351E1E6ED5DA004D3426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDB35231E6ED5DA004D3426 /* VILLOIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VILLOIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDB35271E6ED5DA004D3426 /* VILLOIDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VILLOIDUITests.m; sourceTree = "<group>"; };
+		3CDB35291E6ED5DA004D3426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CDB34FC1E6ED5DA004D3426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB35151E6ED5DA004D3426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB35201E6ED5DA004D3426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CDB34F61E6ED5DA004D3426 = {
+			isa = PBXGroup;
+			children = (
+				3CDB35011E6ED5DA004D3426 /* VILLOID */,
+				3CDB351B1E6ED5DA004D3426 /* VILLOIDTests */,
+				3CDB35261E6ED5DA004D3426 /* VILLOIDUITests */,
+				3CDB35001E6ED5DA004D3426 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CDB35001E6ED5DA004D3426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB34FF1E6ED5DA004D3426 /* VILLOID.app */,
+				3CDB35181E6ED5DA004D3426 /* VILLOIDTests.xctest */,
+				3CDB35231E6ED5DA004D3426 /* VILLOIDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CDB35011E6ED5DA004D3426 /* VILLOID */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB35051E6ED5DA004D3426 /* AppDelegate.h */,
+				3CDB35061E6ED5DA004D3426 /* AppDelegate.m */,
+				3CDB35081E6ED5DA004D3426 /* ViewController.h */,
+				3CDB35091E6ED5DA004D3426 /* ViewController.m */,
+				3CDB350B1E6ED5DA004D3426 /* Main.storyboard */,
+				3CDB350E1E6ED5DA004D3426 /* Assets.xcassets */,
+				3CDB35101E6ED5DA004D3426 /* LaunchScreen.storyboard */,
+				3CDB35131E6ED5DA004D3426 /* Info.plist */,
+				3CDB35021E6ED5DA004D3426 /* Supporting Files */,
+			);
+			path = VILLOID;
+			sourceTree = "<group>";
+		};
+		3CDB35021E6ED5DA004D3426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB35031E6ED5DA004D3426 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CDB351B1E6ED5DA004D3426 /* VILLOIDTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB351C1E6ED5DA004D3426 /* VILLOIDTests.m */,
+				3CDB351E1E6ED5DA004D3426 /* Info.plist */,
+			);
+			path = VILLOIDTests;
+			sourceTree = "<group>";
+		};
+		3CDB35261E6ED5DA004D3426 /* VILLOIDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3CDB35271E6ED5DA004D3426 /* VILLOIDUITests.m */,
+				3CDB35291E6ED5DA004D3426 /* Info.plist */,
+			);
+			path = VILLOIDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CDB34FE1E6ED5DA004D3426 /* VILLOID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CDB352C1E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOID" */;
+			buildPhases = (
+				3CDB34FB1E6ED5DA004D3426 /* Sources */,
+				3CDB34FC1E6ED5DA004D3426 /* Frameworks */,
+				3CDB34FD1E6ED5DA004D3426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VILLOID;
+			productName = VILLOID;
+			productReference = 3CDB34FF1E6ED5DA004D3426 /* VILLOID.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CDB35171E6ED5DA004D3426 /* VILLOIDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CDB352F1E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDTests" */;
+			buildPhases = (
+				3CDB35141E6ED5DA004D3426 /* Sources */,
+				3CDB35151E6ED5DA004D3426 /* Frameworks */,
+				3CDB35161E6ED5DA004D3426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CDB351A1E6ED5DA004D3426 /* PBXTargetDependency */,
+			);
+			name = VILLOIDTests;
+			productName = VILLOIDTests;
+			productReference = 3CDB35181E6ED5DA004D3426 /* VILLOIDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CDB35221E6ED5DA004D3426 /* VILLOIDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CDB35321E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDUITests" */;
+			buildPhases = (
+				3CDB351F1E6ED5DA004D3426 /* Sources */,
+				3CDB35201E6ED5DA004D3426 /* Frameworks */,
+				3CDB35211E6ED5DA004D3426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CDB35251E6ED5DA004D3426 /* PBXTargetDependency */,
+			);
+			name = VILLOIDUITests;
+			productName = VILLOIDUITests;
+			productReference = 3CDB35231E6ED5DA004D3426 /* VILLOIDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CDB34F71E6ED5DA004D3426 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "董知樾";
+				TargetAttributes = {
+					3CDB34FE1E6ED5DA004D3426 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7WLC7DGYAW;
+						ProvisioningStyle = Automatic;
+					};
+					3CDB35171E6ED5DA004D3426 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7WLC7DGYAW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CDB34FE1E6ED5DA004D3426;
+					};
+					3CDB35221E6ED5DA004D3426 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7WLC7DGYAW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CDB34FE1E6ED5DA004D3426;
+					};
+				};
+			};
+			buildConfigurationList = 3CDB34FA1E6ED5DA004D3426 /* Build configuration list for PBXProject "VILLOID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CDB34F61E6ED5DA004D3426;
+			productRefGroup = 3CDB35001E6ED5DA004D3426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CDB34FE1E6ED5DA004D3426 /* VILLOID */,
+				3CDB35171E6ED5DA004D3426 /* VILLOIDTests */,
+				3CDB35221E6ED5DA004D3426 /* VILLOIDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CDB34FD1E6ED5DA004D3426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDB35121E6ED5DA004D3426 /* LaunchScreen.storyboard in Resources */,
+				3CDB350F1E6ED5DA004D3426 /* Assets.xcassets in Resources */,
+				3CDB350D1E6ED5DA004D3426 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB35161E6ED5DA004D3426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB35211E6ED5DA004D3426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CDB34FB1E6ED5DA004D3426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDB350A1E6ED5DA004D3426 /* ViewController.m in Sources */,
+				3CDB35071E6ED5DA004D3426 /* AppDelegate.m in Sources */,
+				3CDB35041E6ED5DA004D3426 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB35141E6ED5DA004D3426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDB351D1E6ED5DA004D3426 /* VILLOIDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CDB351F1E6ED5DA004D3426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDB35281E6ED5DA004D3426 /* VILLOIDUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CDB351A1E6ED5DA004D3426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CDB34FE1E6ED5DA004D3426 /* VILLOID */;
+			targetProxy = 3CDB35191E6ED5DA004D3426 /* PBXContainerItemProxy */;
+		};
+		3CDB35251E6ED5DA004D3426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CDB34FE1E6ED5DA004D3426 /* VILLOID */;
+			targetProxy = 3CDB35241E6ED5DA004D3426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CDB350B1E6ED5DA004D3426 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CDB350C1E6ED5DA004D3426 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CDB35101E6ED5DA004D3426 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CDB35111E6ED5DA004D3426 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CDB352A1E6ED5DA004D3426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CDB352B1E6ED5DA004D3426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CDB352D1E6ED5DA004D3426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CDB352E1E6ED5DA004D3426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3CDB35301E6ED5DA004D3426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOIDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOIDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VILLOID.app/VILLOID";
+			};
+			name = Debug;
+		};
+		3CDB35311E6ED5DA004D3426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOIDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOIDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VILLOID.app/VILLOID";
+			};
+			name = Release;
+		};
+		3CDB35331E6ED5DA004D3426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOIDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOIDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VILLOID;
+			};
+			name = Debug;
+		};
+		3CDB35341E6ED5DA004D3426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7WLC7DGYAW;
+				INFOPLIST_FILE = VILLOIDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xh.VILLOIDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VILLOID;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CDB34FA1E6ED5DA004D3426 /* Build configuration list for PBXProject "VILLOID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDB352A1E6ED5DA004D3426 /* Debug */,
+				3CDB352B1E6ED5DA004D3426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CDB352C1E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDB352D1E6ED5DA004D3426 /* Debug */,
+				3CDB352E1E6ED5DA004D3426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3CDB352F1E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDB35301E6ED5DA004D3426 /* Debug */,
+				3CDB35311E6ED5DA004D3426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3CDB35321E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDB35331E6ED5DA004D3426 /* Debug */,
+				3CDB35341E6ED5DA004D3426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CDB34F71E6ED5DA004D3426 /* Project object */;
+}
