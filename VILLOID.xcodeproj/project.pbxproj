@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA750271E727F8800F0EC9C /* layout.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CA750261E727F8800F0EC9C /* layout.plist */; };
+		3CA750351E7295B800F0EC9C /* YYItemCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA750301E7295B800F0EC9C /* YYItemCoordinate.m */; };
+		3CA750361E7295B800F0EC9C /* YYLayoutDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA750321E7295B800F0EC9C /* YYLayoutDefine.m */; };
+		3CA750371E7295B800F0EC9C /* YYTemplateLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA750341E7295B800F0EC9C /* YYTemplateLayout.m */; };
+		3CA7503D1E7295C400F0EC9C /* YYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7503A1E7295C400F0EC9C /* YYCollectionViewCell.m */; };
+		3CA7503E1E7295C400F0EC9C /* YYTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7503C1E7295C400F0EC9C /* YYTemplateView.m */; };
 		3CDB35041E6ED5DA004D3426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35031E6ED5DA004D3426 /* main.m */; };
 		3CDB35071E6ED5DA004D3426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35061E6ED5DA004D3426 /* AppDelegate.m */; };
 		3CDB350A1E6ED5DA004D3426 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB35091E6ED5DA004D3426 /* ViewController.m */; };
@@ -35,6 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CA750261E727F8800F0EC9C /* layout.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = layout.plist; sourceTree = "<group>"; };
+		3CA7502F1E7295B800F0EC9C /* YYItemCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYItemCoordinate.h; sourceTree = "<group>"; };
+		3CA750301E7295B800F0EC9C /* YYItemCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYItemCoordinate.m; sourceTree = "<group>"; };
+		3CA750311E7295B800F0EC9C /* YYLayoutDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLayoutDefine.h; sourceTree = "<group>"; };
+		3CA750321E7295B800F0EC9C /* YYLayoutDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLayoutDefine.m; sourceTree = "<group>"; };
+		3CA750331E7295B800F0EC9C /* YYTemplateLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTemplateLayout.h; sourceTree = "<group>"; };
+		3CA750341E7295B800F0EC9C /* YYTemplateLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTemplateLayout.m; sourceTree = "<group>"; };
+		3CA750391E7295C400F0EC9C /* YYCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCollectionViewCell.h; sourceTree = "<group>"; };
+		3CA7503A1E7295C400F0EC9C /* YYCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCollectionViewCell.m; sourceTree = "<group>"; };
+		3CA7503B1E7295C400F0EC9C /* YYTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTemplateView.h; sourceTree = "<group>"; };
+		3CA7503C1E7295C400F0EC9C /* YYTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTemplateView.m; sourceTree = "<group>"; };
 		3CDB34FF1E6ED5DA004D3426 /* VILLOID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VILLOID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDB35031E6ED5DA004D3426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CDB35051E6ED5DA004D3426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +95,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CA7502E1E7295B800F0EC9C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				3CA7502F1E7295B800F0EC9C /* YYItemCoordinate.h */,
+				3CA750301E7295B800F0EC9C /* YYItemCoordinate.m */,
+				3CA750311E7295B800F0EC9C /* YYLayoutDefine.h */,
+				3CA750321E7295B800F0EC9C /* YYLayoutDefine.m */,
+				3CA750331E7295B800F0EC9C /* YYTemplateLayout.h */,
+				3CA750341E7295B800F0EC9C /* YYTemplateLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		3CA750381E7295C400F0EC9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CA750391E7295C400F0EC9C /* YYCollectionViewCell.h */,
+				3CA7503A1E7295C400F0EC9C /* YYCollectionViewCell.m */,
+				3CA7503B1E7295C400F0EC9C /* YYTemplateView.h */,
+				3CA7503C1E7295C400F0EC9C /* YYTemplateView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3CDB34F61E6ED5DA004D3426 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +142,8 @@
 		3CDB35011E6ED5DA004D3426 /* VILLOID */ = {
 			isa = PBXGroup;
 			children = (
+				3CA750381E7295C400F0EC9C /* View */,
+				3CA7502E1E7295B800F0EC9C /* Layout */,
 				3CDB35051E6ED5DA004D3426 /* AppDelegate.h */,
 				3CDB35061E6ED5DA004D3426 /* AppDelegate.m */,
 				3CDB35081E6ED5DA004D3426 /* ViewController.h */,
@@ -109,6 +152,7 @@
 				3CDB350E1E6ED5DA004D3426 /* Assets.xcassets */,
 				3CDB35101E6ED5DA004D3426 /* LaunchScreen.storyboard */,
 				3CDB35131E6ED5DA004D3426 /* Info.plist */,
+				3CA750261E727F8800F0EC9C /* layout.plist */,
 				3CDB35021E6ED5DA004D3426 /* Supporting Files */,
 			);
 			path = VILLOID;
@@ -249,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA750271E727F8800F0EC9C /* layout.plist in Resources */,
 				3CDB35121E6ED5DA004D3426 /* LaunchScreen.storyboard in Resources */,
 				3CDB350F1E6ED5DA004D3426 /* Assets.xcassets in Resources */,
 				3CDB350D1E6ED5DA004D3426 /* Main.storyboard in Resources */,
@@ -277,8 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDB350A1E6ED5DA004D3426 /* ViewController.m in Sources */,
+				3CA750371E7295B800F0EC9C /* YYTemplateLayout.m in Sources */,
+				3CA7503D1E7295C400F0EC9C /* YYCollectionViewCell.m in Sources */,
 				3CDB35071E6ED5DA004D3426 /* AppDelegate.m in Sources */,
+				3CA7503E1E7295C400F0EC9C /* YYTemplateView.m in Sources */,
+				3CA750351E7295B800F0EC9C /* YYItemCoordinate.m in Sources */,
 				3CDB35041E6ED5DA004D3426 /* main.m in Sources */,
+				3CA750361E7295B800F0EC9C /* YYLayoutDefine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +566,7 @@
 				3CDB352E1E6ED5DA004D3426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CDB352F1E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +575,7 @@
 				3CDB35311E6ED5DA004D3426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CDB35321E6ED5DA004D3426 /* Build configuration list for PBXNativeTarget "VILLOIDUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +584,7 @@
 				3CDB35341E6ED5DA004D3426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
