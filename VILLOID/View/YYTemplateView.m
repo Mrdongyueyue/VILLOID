@@ -30,10 +30,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self initConfig];
-        
-        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
-        longPress.minimumPressDuration = 1;
-        [self addGestureRecognizer:longPress];
     }
     return self;
 }
@@ -44,14 +40,20 @@
     _rowNumber = 3;
     _arrangeNumber = 3;
     _images = [NSMutableArray array];
+    
     for (int i = 0; i < 9; i ++) {
         [_images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"IU%d",i]]];
     }
+    
     _moveView = [[UIView alloc]init];
     _moveView.clipsToBounds = YES;
     _moveView.layer.contentsGravity = kCAGravityResizeAspectFill;
     [self addSubview:_moveView];
     _moveView.hidden = YES;
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+    longPress.minimumPressDuration = 1;
+    [self addGestureRecognizer:longPress];
 }
 
 - (void)setTemplateLayout:(YYTemplateLayout *)templateLayout {
@@ -112,7 +114,7 @@
 - (void)longPress:(UILongPressGestureRecognizer *)press {
     switch (press.state) {
         case UIGestureRecognizerStateBegan:{
-            //判断手势落点位置是否在路径上
+            //判断手势落点位置是否在某个item上
             CGPoint beginPoint = [press locationInView:self];
             BOOL isContain = NO;
             UIView *pointView = nil;
@@ -131,6 +133,7 @@
                 break;
             }
             _moveView.hidden = NO;
+            _moveView.alpha = 1;
             _moveView.frame = pointView.frame;
             _moveView.layer.contents = pointView.layer.contents;
             _beginFrame = _moveView.frame;
@@ -147,8 +150,8 @@
                     break;
                 }
                 isContain = CGRectIntersectsRect(_items[i].frame, (CGRect){movePoint,{1,1}});
-                if (isContain && _beginIndex != i) {
-                    _moveView.frame = _items[i].frame;
+                if (isContain) {
+                    _moveView.bounds = _items[i].bounds;
                     break;
                 }
             }

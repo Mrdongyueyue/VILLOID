@@ -38,8 +38,6 @@
     _collectionView.pagingEnabled = YES;
     _collectionView.backgroundColor = [UIColor whiteColor];
     
-    NSArray *array = getLayoutDafines();
-    [array writeToFile:@"/Users/dongzhiyue/Desktop/layout.plist" atomically:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

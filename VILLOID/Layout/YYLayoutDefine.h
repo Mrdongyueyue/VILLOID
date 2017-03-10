@@ -12,4 +12,6 @@
 
 NSArray * getLayoutDafines();
 
+void createPlist();
+
 @end
