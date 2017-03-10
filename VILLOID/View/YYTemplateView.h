@@ -11,13 +11,21 @@
 @class YYTemplateLayout;
 
 @interface YYTemplateView : UIView
+
 ///defalut 3
 @property (assign, nonatomic) NSUInteger rowNumber;
 
 ///defalut 3
 @property (assign, nonatomic) NSUInteger arrangeNumber;
 
+///defalut zero
 @property (assign, nonatomic) UIEdgeInsets edgeInsets;
+
+///defalut 10
+@property (assign, nonatomic) CGFloat verticalMargin;
+
+///defalut 10
+@property (assign, nonatomic) CGFloat horizontalMargin;
 
 @property (strong, nonatomic) YYTemplateLayout *templateLayout;
 

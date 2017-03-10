@@ -41,6 +41,9 @@
     _arrangeNumber = 3;
     _images = [NSMutableArray array];
     
+    _verticalMargin = 10;
+    _horizontalMargin = 10;
+    
     for (int i = 0; i < 9; i ++) {
         [_images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"IU%d",i]]];
     }
@@ -84,13 +87,11 @@
     
     
     
-    CGFloat verticalMargin = 10;
-    CGFloat horizontalMargin = 10;
     CGFloat selfW = self.frame.size.width;
     CGFloat selfH = self.frame.size.height;
     
-    CGFloat itemUnitW = (selfW - _edgeInsets.left - _edgeInsets.right - verticalMargin * (_arrangeNumber - 1)) / _arrangeNumber;
-    CGFloat itemUnitH = (selfH - _edgeInsets.top - -_edgeInsets.bottom - horizontalMargin * (_rowNumber - 1)) / _rowNumber;
+    CGFloat itemUnitW = (selfW - _edgeInsets.left - _edgeInsets.right - _verticalMargin * (_arrangeNumber - 1)) / _arrangeNumber;
+    CGFloat itemUnitH = (selfH - _edgeInsets.top - -_edgeInsets.bottom - _horizontalMargin * (_rowNumber - 1)) / _rowNumber;
     
     for (NSInteger i = 0; i < _templateLayout.itemCoordinaties.count; i ++) {
         CGFloat x = _templateLayout.itemCoordinaties[i].x.floatValue;
@@ -98,7 +99,7 @@
         CGFloat w = _templateLayout.itemCoordinaties[i].w.floatValue;
         CGFloat h = _templateLayout.itemCoordinaties[i].h.floatValue;
         
-        _items[i].frame = CGRectMake(x * (itemUnitW + verticalMargin) + _edgeInsets.left, y * (itemUnitH + horizontalMargin) + _edgeInsets.top, w * itemUnitW + (w - 1) * verticalMargin, h * itemUnitH + (h - 1) * horizontalMargin);
+        _items[i].frame = CGRectMake(x * (itemUnitW + _verticalMargin) + _edgeInsets.left, y * (itemUnitH + _horizontalMargin) + _edgeInsets.top, w * itemUnitW + (w - 1) * _verticalMargin, h * itemUnitH + (h - 1) * _horizontalMargin);
         
     }
     
