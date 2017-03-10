@@ -12,6 +12,9 @@
 
 @interface YYTemplateLayout : NSObject
 
+@property (strong, nonatomic) NSNumber *rowNumber;
+@property (strong, nonatomic) NSNumber *arrangeNumber;
+
 @property (strong, nonatomic) NSArray<__kindof YYItemCoordinate *> *itemCoordinaties;
 
 + (NSArray <__kindof YYTemplateLayout *> *)yy_itemTemplateLayout;

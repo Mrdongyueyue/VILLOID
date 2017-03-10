@@ -14,9 +14,11 @@
     NSMutableArray *array = [NSMutableArray array];
     
     NSArray *layouts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"layout" ofType:@"plist"]];
-    for (NSArray *layout in layouts) {
+    for (NSDictionary *layout in layouts) {
         YYTemplateLayout *template = [[YYTemplateLayout alloc]init];
-        template.itemCoordinaties = [YYItemCoordinate yy_itemCoordinatesWithArray:layout];
+        template.itemCoordinaties = [YYItemCoordinate yy_itemCoordinatesWithArray:layout[@"itemCoordinaties"]];
+        template.rowNumber = layout[@"rowNumber"];
+        template.arrangeNumber = layout[@"arrangeNumber"];
         [array addObject:template];
     }
     return array;

@@ -56,6 +56,8 @@
 
 - (void)setTemplateLayout:(YYTemplateLayout *)templateLayout {
     _templateLayout = templateLayout;
+    _rowNumber = templateLayout.rowNumber.integerValue;
+    _arrangeNumber = templateLayout.arrangeNumber.integerValue;
     [self createSubviews];
 }
 

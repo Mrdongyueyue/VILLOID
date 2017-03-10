@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "YYTemplateLayout.h"
 #import "YYCollectionViewCell.h"
+#import "YYLayoutDefine.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -36,6 +37,9 @@
     [_collectionView registerClass:[YYCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     _collectionView.pagingEnabled = YES;
     _collectionView.backgroundColor = [UIColor whiteColor];
+    
+    NSArray *array = getLayoutDafines();
+    [array writeToFile:@"/Users/dongzhiyue/Desktop/layout.plist" atomically:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
