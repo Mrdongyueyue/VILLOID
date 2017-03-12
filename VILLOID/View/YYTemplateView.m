@@ -37,8 +37,6 @@
 - (void)initConfig {
     _items = [NSMutableArray array];
     _edgeInsets = UIEdgeInsetsZero;
-    _rowNumber = 3;
-    _arrangeNumber = 3;
     _images = [NSMutableArray array];
     
     _verticalMargin = 10;
@@ -68,6 +66,8 @@
 
 
 - (void)createSubviews {
+    if (_rowNumber <= 0 || _arrangeNumber <= 0) return;
+    
     NSInteger difference = _templateLayout.itemCoordinaties.count - _items.count;
     if (difference > 0) {
         for (NSInteger i = 0; i < difference; i ++) {
@@ -113,6 +113,7 @@
 }
 
 - (void)longPress:(UILongPressGestureRecognizer *)press {
+    CGFloat scale = 1.0;
     switch (press.state) {
         case UIGestureRecognizerStateBegan:{
             //判断手势落点位置是否在某个item上
@@ -135,7 +136,8 @@
             }
             _moveView.hidden = NO;
             _moveView.alpha = 1;
-            _moveView.frame = pointView.frame;
+            _moveView.center = pointView.center;
+            _moveView.bounds = CGRectMake(0, 0, pointView.bounds.size.width * scale, pointView.bounds.size.height * scale);
             _moveView.layer.contents = pointView.layer.contents;
             _beginFrame = _moveView.frame;
         }
@@ -152,7 +154,7 @@
                 }
                 isContain = CGRectIntersectsRect(_items[i].frame, (CGRect){movePoint,{1,1}});
                 if (isContain) {
-                    _moveView.bounds = _items[i].bounds;
+                    _moveView.bounds = CGRectMake(0, 0, _items[i].bounds.size.width * scale, _items[i].bounds.size.height * scale);
                     break;
                 }
             }
@@ -174,7 +176,6 @@
                 }
                 isContain = CGRectIntersectsRect(_items[i].frame, (CGRect){endPoint,{1,1}});
                 if (isContain) {
-                    _moveView.frame = _items[i].frame;
                     endIndex = i;
                     break;
                 }
@@ -184,8 +185,13 @@
                 [self moveGoBackOrigin];
             } else {
                 if (_beginIndex != endIndex) {
-                    [_images exchangeObjectAtIndex:_beginIndex withObjectAtIndex:endIndex];
-                    [self testConfigContent];
+                    [UIView animateWithDuration:0.5 animations:^{
+                        _moveView.frame = _items[endIndex].frame;
+                    } completion:^(BOOL finished) {
+                        _moveView.hidden = YES;
+                        [_images exchangeObjectAtIndex:_beginIndex withObjectAtIndex:endIndex];
+                        [self testConfigContent];
+                    }];
                 } else {
                     [self moveGoBackOrigin];
                 }

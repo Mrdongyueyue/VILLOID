@@ -12,11 +12,9 @@
 
 @interface YYTemplateView : UIView
 
-///defalut 3
-@property (assign, nonatomic) NSUInteger rowNumber;
+@property (assign, nonatomic, readonly) NSUInteger rowNumber;
 
-///defalut 3
-@property (assign, nonatomic) NSUInteger arrangeNumber;
+@property (assign, nonatomic, readonly) NSUInteger arrangeNumber;
 
 ///defalut zero
 @property (assign, nonatomic) UIEdgeInsets edgeInsets;
