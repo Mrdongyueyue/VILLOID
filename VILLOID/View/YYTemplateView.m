@@ -70,14 +70,23 @@
     
     NSInteger difference = _templateLayout.itemCoordinaties.count - _items.count;
     if (difference > 0) {
-        for (NSInteger i = 0; i < difference; i ++) {
-            UIView *itemView = [[UIView alloc] init];
-            itemView.backgroundColor = [UIColor redColor];
-            [self insertSubview:itemView belowSubview:_moveView];
-            
-            itemView.layer.contentsGravity = kCAGravityResizeAspectFill;
-            itemView.clipsToBounds = YES;
-            [_items addObject:itemView];
+        if (_delegate && [_delegate respondsToSelector:@selector(templateView:itemAtIndex:)]) {
+            for (NSInteger i = 0; i < difference; i ++) {
+                UIView *itemView = [_delegate templateView:self itemAtIndex:i];
+                [self insertSubview:itemView belowSubview:_moveView];
+                
+                [_items addObject:itemView];
+            }
+        } else {
+            for (NSInteger i = 0; i < difference; i ++) {
+                UIView *itemView = [[UIView alloc] init];
+                itemView.backgroundColor = [UIColor redColor];
+                [self insertSubview:itemView belowSubview:_moveView];
+                
+                itemView.layer.contentsGravity = kCAGravityResizeAspectFill;
+                itemView.clipsToBounds = YES;
+                [_items addObject:itemView];
+            }
         }
     }
     
@@ -107,8 +116,14 @@
 }
 
 - (void)testConfigContent {
-    for (NSInteger i = 0; i < _templateLayout.itemCoordinaties.count; i ++) {
-        _items[i].layer.contents = (__bridge id _Nullable)(_images[i].CGImage);
+    if (_delegate && [_delegate respondsToSelector:@selector(templateView:willDisplayItem:forItemAtIndex:)]) {
+        for (NSInteger i = 0; i < _templateLayout.itemCoordinaties.count; i ++) {
+            [_delegate templateView:self willDisplayItem:_items[i] forItemAtIndex:i];
+        }
+    } else {
+        for (NSInteger i = 0; i < _templateLayout.itemCoordinaties.count; i ++) {
+            _items[i].layer.contents = (__bridge id _Nullable)(_images[i].CGImage);
+        }
     }
 }
 
@@ -138,7 +153,11 @@
             _moveView.alpha = 1;
             _moveView.center = pointView.center;
             _moveView.bounds = CGRectMake(0, 0, pointView.bounds.size.width * scale, pointView.bounds.size.height * scale);
-            _moveView.layer.contents = pointView.layer.contents;
+            if (_delegate && [_delegate respondsToSelector:@selector(templateView:itemAtIndex:)]) {
+                _moveView.layer.contents = (__bridge id _Nullable)([self imageFromView:pointView].CGImage);
+            } else {
+                _moveView.layer.contents = pointView.layer.contents;
+            }
             _beginFrame = _moveView.frame;
         }
         case UIGestureRecognizerStateChanged: {
@@ -185,12 +204,17 @@
                 [self moveGoBackOrigin];
             } else {
                 if (_beginIndex != endIndex) {
+                    
                     [UIView animateWithDuration:0.5 animations:^{
                         _moveView.frame = _items[endIndex].frame;
                     } completion:^(BOOL finished) {
                         _moveView.hidden = YES;
-                        [_images exchangeObjectAtIndex:_beginIndex withObjectAtIndex:endIndex];
-                        [self testConfigContent];
+                        if (_delegate && [_delegate respondsToSelector:@selector(templateView:exchangeItemAtIndex:withIndex:)]) {
+                            [_delegate templateView:self exchangeItemAtIndex:_beginIndex withIndex:endIndex];
+                        } else {
+                            [_images exchangeObjectAtIndex:_beginIndex withObjectAtIndex:endIndex];
+                            [self testConfigContent];
+                        }
                     }];
                 } else {
                     [self moveGoBackOrigin];
@@ -215,5 +239,29 @@
     }];
 }
 
+- (UIImage *)imageFromView:(UIView *)view {
+    
+    UIGraphicsBeginImageContext(view.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:context];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+- (void)reloadData {
+    [self createSubviews];
+}
+
+- (void)reloadWithIndexSet:(NSIndexSet *)indexSet {
+    [indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
+        if (_delegate && [_delegate respondsToSelector:@selector(templateView:willDisplayItem:forItemAtIndex:)]) {
+            [_delegate templateView:self willDisplayItem:_items[idx] forItemAtIndex:idx];
+        } else {
+            _items[idx].layer.contents = (__bridge id _Nullable)(_images[idx].CGImage);
+        }
+    }];
+}
 
 @end
